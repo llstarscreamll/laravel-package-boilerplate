@@ -1,0 +1,54 @@
+{
+    "name": "llstarscreamll/laravel-package-boilerplate",
+    "description": "",
+    "keywords": [
+        "llstarscreamll",
+        "laravel-package-boilerplate"
+    ],
+    "homepage": "https://github.com/llstarscreamll/laravel-package-boilerplate",
+    "license": "MIT License (MIT)",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Johan Alvarez",
+            "email": "llstarscreamll@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.7.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Llstarscreamll\\LaravelPackageBoilerplate\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Llstarscreamll\\LaravelPackageBoilerplate\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Llstarscreamll\\LaravelPackageBoilerplate\\LaravelPackageBoilerplateServiceProvider"
+            ],
+            "aliases": {
+                "LaravelPackageBoilerplate": "Llstarscreamll\\LaravelPackageBoilerplate\\LaravelPackageBoilerplateFacade"
+            }
+        }
+    }
+}
